@@ -26,6 +26,13 @@ func (t *Tree) Insert(v int) {
 	t.right.Insert(v)
 }
 
+func (t *Tree) IsLeaf() bool {
+	if t == nil {
+		return false
+	}
+	return t.left == nil && t.right == nil
+}
+
 type BSTree struct {
 	left  *BSTree
 	right *BSTree
